@@ -76,15 +76,15 @@ defmodule RetWeb.Plugs.AddCSP do
       storage_url
     } #{assets_url} https://aframe.io https://www.youtube.com https://s.ytimg.com; child-src #{custom_rules[:child_src]} 'self' blob:; worker-src #{
       custom_rules[:worker_src]
-    } #{storage_url} #{assets_url} 'self' blob:; font-src #{custom_rules[:font_src]} 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net https://fonts.gstatic.com https://cdn.aframe.io #{
+    } #{storage_url} #{assets_url} 'self' blob:; font-src #{custom_rules[:font_src]} 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net https://fonts.gstatic.com https://cdn.aframe.io https://aframe-font.s3.ap-northeast-1.amazonaws.com #{
       storage_url
     } #{assets_url} #{cors_proxy_url}; style-src #{custom_rules[:style_src]} 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net #{
       cors_proxy_url
     } #{storage_url} #{assets_url} 'unsafe-inline'; connect-src #{custom_rules[:connect_src]} 'self' #{cors_proxy_url} #{
       storage_url
-    } #{assets_url} #{link_url} https://dpdb.webvr.rocks #{thumbnail_url} #{ret_direct_connect} https://www.google-analytics.com https://cdn.aframe.io https://www.youtube.com https://api.github.com https://bh4d9od16a-3.algolianet.com data: blob:; img-src #{
+    } #{assets_url} #{link_url} https://dpdb.webvr.rocks #{thumbnail_url} #{ret_direct_connect} https://www.google-analytics.com https://cdn.aframe.io https://aframe-font.s3.ap-northeast-1.amazonaws.com https://www.youtube.com https://api.github.com https://bh4d9od16a-3.algolianet.com data: blob:; img-src #{
       custom_rules[:img_src]
-    } 'self' https://www.google-analytics.com #{storage_url} #{assets_url} #{cors_proxy_url} #{thumbnail_url} https://cdn.aframe.io https://www.youtube.com https://user-images.githubusercontent.com https://cdn.jsdelivr.net data: blob:; media-src #{
+    } 'self' https://www.google-analytics.com #{storage_url} #{assets_url} #{cors_proxy_url} #{thumbnail_url} https://cdn.aframe.io https://aframe-font.s3.ap-northeast-1.amazonaws.com https://www.youtube.com https://user-images.githubusercontent.com https://cdn.jsdelivr.net data: blob:; media-src #{
       custom_rules[:media_src]
     } 'self' #{cors_proxy_url} #{storage_url} #{assets_url} #{thumbnail_url} https://www.youtube.com *.googlevideo.com data: blob:; frame-src #{
       custom_rules[:frame_src]
